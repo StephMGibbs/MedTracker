@@ -1,19 +1,19 @@
 TODO LIST (X in brackets means completed, / in brackets means started):
-[] Look at Java design patterns -> https://www.geeksforgeeks.org/design-patterns-set-1-introduction/?ref=lbp
-[] Use pattern MVC (Model View Controller) for Javafx UI -> https://www.geeksforgeeks.org/mvc-design-pattern/#:~:text=The%20Model%20View%20Controller%20(MVC,but%20not%20for%20complete%20application.
-[] Use pattern singleton for database -> https://www.geeksforgeeks.org/singleton-design-pattern/?ref=rp
+[/] Look at Java design patterns -> https://www.geeksforgeeks.org/design-patterns-set-1-introduction/?ref=lbp
+[/] Use pattern MVC (Model View Controller) for Javafx UI -> https://www.geeksforgeeks.org/mvc-design-pattern/#:~:text=The%20Model%20View%20Controller%20(MVC,but%20not%20for%20complete%20application.
+[X] Use pattern singleton for database -> https://www.geeksforgeeks.org/singleton-design-pattern/?ref=rp
 [] Use pattern factory for hospitals?? -> https://www.baeldung.com/creational-design-patterns#:~:text=The%20Factory%20Design%20Pattern%20or,class%20defer%20instantiation%20to%20subclasses”.
 [] Use pattern observer for updating meds/appointments -> https://www.geeksforgeeks.org/observer-pattern-set-1-introduction/
 
 
-[] create MySQL database
-[] connect program to database
-[] make calendar -> https://www.geeksforgeeks.org/java-program-to-generate-calendar-of-any-year-without-calendar-get-function/
+[/] create MySQL database
+[/] connect program to database
+[/] make calendar -> https://www.geeksforgeeks.org/java-program-to-generate-calendar-of-any-year-without-calendar-get-function/
 
 
 [] Unit testing
 [] Javafx display
-[] prevent sql injection w/ prepared statements
+[/] prevent sql injection w/ prepared statements
 [] user registration w/ spring boot -> https://www.codejava.net/frameworks/spring-boot/user-registration-and-login-tutorial
 [] Android mobile app? -> https://www.theserverside.com/tutorial/Step-by-step-guide-to-Android-development-with-Eclipse
 ________________________________________________________________________
@@ -24,8 +24,8 @@ PLAN (methods/variables/etc):
 
 
 +Immunization
--shotsTaken
--shotsNeeded
+-addShotTaken
+-shotNeeded
 -listShotsTaken
 -listShotsNeeded
 
@@ -67,3 +67,18 @@ PLAN (methods/variables/etc):
 -listHospitalsVisited
 -addHospitalVisited
 -getHospitalVisited
+
+_______________________________________________________________________
+NOTES:
+-Model: global vars, setters, & getters
+-View: methods to display/combine info for console/gui
+-Controller: global vars & setters/getters for view/model. 
+	Updates information from model to view. Calculations done inside 
+	model, results saved to view.
+	
+Model gets commands from Controller & processes them.
+View decides how to display controls/info into GUI, notified by model
+	if changed.
+Controller is in charge of GUI controls. Calls methods in model to 
+	tell it to change state w/ listeners/getters/setters. Detects 
+	actions by user & call method in model to take care of action.
